@@ -1,0 +1,71 @@
+@import "app/variables.css.less";
+@import "app/mixins.css.less";
+
+.modal-container{
+  z-index:1051;
+  display: none;
+  height: 100%;
+  width: 100%;
+  
+  &.in{
+    display: table !important;
+  }
+  
+  & > .modal-wrapper{
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    
+    .modal{
+      display: inline-block;
+      background-color: lighten(@bodyBackground, 50%);
+      text-align: left;
+
+      
+      .modal-header{
+        margin-top: 0 !important;
+        .h2();
+              
+        > i{
+          font-size: inherit;
+          line-height: inherit;
+          margin-right: @app-gutter-1;
+        }
+        
+        .close{
+          right: auto;
+          top: auto;
+        }
+      }
+      
+      .modal-body{
+        min-width: 200px;
+        line-height: 2em;
+      }
+      
+       .modal-footer{
+         margin-top: @app-gutter-4;
+       }
+      
+      .row{
+        margin-top: @app-gutter-5;
+        overflow: hidden;
+      }
+      
+      &.alert, &.info{
+        text-align: center;
+      }
+      
+    }
+  }
+  
+  .nav-tabs{
+     > li{
+      > a{
+        padding: @app-gutter-1 !important;
+      } 
+     }
+  }
+}

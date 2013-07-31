@@ -1,0 +1,79 @@
+@import "app/components/panels/panel.css.less";
+
+.dropdown{
+  
+  &.block{
+    width: 100%;
+    
+    > .dropdown-toggle{
+      width: 100%;
+      .box-sizing();
+      
+      > .caret{
+        float:right;
+      }
+    }
+  }
+  
+  > .dropdown-toggle{
+    background-color:transparent;
+    display: inline-block;
+    text-align:left;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    
+    /* BOB::20130318  - unfortunately needd an important to overide bootstraps default. Perhaps has to to with the sprockets css combine
+                      - TODO :: need to remove !important's on all other dropdown overides when solved */
+    padding: @app-gutter-1 / 2 @app-gutter-2 !important;
+    
+    .border-radius(4px);
+    
+    > [class^="icon-"], > [class*=" icon-"]{
+      line-height: 100%;
+    }
+
+    > .caret{
+      vertical-align: baseline;
+    }    
+  }
+  
+  > .dropdown-toggle:hover, &.open > .dropdown-toggle{
+    border-color: @app-line-gray !important;
+    outline:none;
+  }
+
+  > .dropdown-menu{
+    .panel();
+    
+    margin-top: -1px;
+    
+    > .divider{
+      margin-left: -@app-gutter-2 !important;
+      padding-right: @app-gutter-2 * 3  !important;
+    }
+  }
+  
+  &.dropover{
+    background-color: transparent !important;
+    .no-shadow() !important;
+        
+    > .dropdown-toggle{
+      &:after {
+       display: none !important; 
+      }
+    }
+    
+    > .dropdown-menu{
+      top: 0;
+      margin-top: -@app-gutter-1 - 2;
+      
+      > header{
+        padding: 0 @app-gutter-2 @app-gutter-2 @app-gutter-2;
+        margin-bottom: @app-gutter-1;
+        color: @app-text-active-color;
+      }
+    }
+    
+  }
+}

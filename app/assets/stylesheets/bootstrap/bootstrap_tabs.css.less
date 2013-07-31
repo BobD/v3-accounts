@@ -1,0 +1,72 @@
+@import "app/components/panels/panel.css.less";
+
+.nav-tabs{
+  margin:0 !important;
+  width:100%;
+  min-width:225px;
+  overflow:visible;
+  border-bottom: none;
+   
+    > li{
+     padding: @app-gutter-1 @app-gutter-4;
+     width: auto;
+     border-right: 1px solid @app-line-gray;
+     border-bottom: 1px solid @app-line-gray;
+     float:left !important;
+     cursor:pointer;
+
+     > a{
+       padding: 0 !important;
+       border: none !important;
+       .no-shadow();
+     }
+     
+     &.active{
+       border-bottom-color: transparent;
+     }
+     
+     > a:hover, 
+     > a:active,
+     &.active > a{
+        background-color:transparent !important;
+        color: @app-text-active-color !important;
+     }
+
+     &:first-child{
+       padding-left: @app-gutter-1;
+       border-left: none;
+     }
+
+     &:last-child{
+       padding-right:0;
+       border-right: none;
+       float:none !important;
+       overflow:hidden !important;
+       display:block;
+     }
+   }
+}
+
+.tab-content{
+  .panel();
+  .border-radius(0px) !important;
+  .box-shadow(0px 0px 0px rgba(0,0,0,1)) !important;
+  
+  background-color: transparent;
+  border: 0 !important;
+  padding: @app-gutter-1 0 0 0;
+  overflow: visible;
+  
+  > li,
+  .group > li{
+    margin: 0 @app-gutter-1 / 2;
+
+    &:first-child{
+      margin-left: 0;
+    }
+    
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

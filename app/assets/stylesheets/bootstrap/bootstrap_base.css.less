@@ -1,0 +1,36 @@
+@import "app/variables.css.less";
+@import "app/mixins.css.less";
+
+a{
+  text-decoration: none;
+  text-shadow: none !important; 
+  
+  &:hover, &:active, &:focus, .active{
+    text-decoration: none;
+    outline: 0;
+  }
+}
+
+ul {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.input-prepend .add-on, .input-append .add-on{
+  padding:0;
+  margin:0;
+}
+
+.input-append .add-on:last-child, .input-append .btn:last-child {
+  .border-radius(0);
+}
+
+[contenteditable]{
+  outline: 0;
+  white-space: nowrap;
+}
+
+[contenteditable = true]{
+  background: @white;
+}

@@ -1,0 +1,26 @@
+.row-fluid{
+  
+  [class*="span"]{
+    min-height: 0;
+  }
+  
+  &.btn-group{
+   > .btn{
+     margin-left: 4px;
+     
+     &.span2{
+       padding-left: 0;
+       padding-right: 0;
+       text-align: center;
+       
+       > i{
+         margin: 0;
+       }
+     }
+     
+     &:first-child{
+       margin-left: 0;
+     }
+   } 
+  }
+}

@@ -1,0 +1,168 @@
+@import "twitter/bootstrap/variables";
+@import "twitter/bootstrap/mixins";
+@import "app/variables.css.less";
+
+/* SEE  https://raw.github.com/dmitryf/elements/master/elements.less and
+        http://lesscss.org/ for useful mixins */
+
+.fontface(@path, @fontname, @fontfile) {
+    font-family: "@{fontname}";
+    src: url('/assets/fonts/@{path}/@{fontfile}.eot');
+    src: url('/assets/fonts/@{path}/@{fontfile}.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/@{path}/@{fontfile}.woff') format('woff'),
+         url('/assets/fonts/@{path}/@{fontfile}.ttf') format('truetype'),
+         url('/assets/fonts/@{path}/@{fontfile}.svg#@{fontname}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.h1() {font-size: @app-font-size-5; line-height:@app-font-size-5}
+.h2() {font-size: @app-font-size-4; line-height:@app-font-size-4}
+.h3() {font-size: @app-font-size-3; line-height:@app-font-size-3}
+
+.shadow{
+  .box-shadow(1px 1px 4px rgba(0,0,0,0.2));
+}
+
+.no-shadow{
+  .box-shadow(0px 0px 0px);
+}
+
+.box-sizing(){
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; /* Firefox */
+  -webkit-box-sizing: border-box; /* Safari */
+}
+
+.transition(@prop:all, @duration:0.2s, @ease:ease-out) {
+  -webkit-transition: @prop @duration @ease;
+  -moz-transition: @prop @duration @ease;
+  -o-transition: @prop @duration @ease;
+  transition: @prop @duration @ease;
+}
+
+.list-active(@color:@app-text-active-color, @offset_left:-@app-gutter-2){
+  position: relative;
+  
+  &.active{
+    &:before{
+      content: '';
+      display: inline-block !important;
+      width: 5px;
+      background-color: @color;
+      position: absolute;
+      top: 0px;
+      bottom: 3px;
+      left: @offset_left;
+    }
+    
+    > a{
+      color: @color !important;
+    }
+  }
+}
+
+.icon(){
+  font-family: @app-font-icons;
+  font-size: @app-icon-small-size;
+  font-style: normal;
+  background: transparent;
+  text-transform: none;
+  text-align: center;
+  display: inline-block;
+  text-shadow: none !important;
+  margin-right: @app-gutter-1;
+}
+
+.icon-medium(){
+  font-size: @app-icon-medium-size;
+  line-height: @app-icon-medium-size;
+}
+
+.icon-large(){
+  font-size: @app-icon-large-size;
+  line-height: @app-icon-large-size;
+}
+
+
+// Single Corner Border Radius
+.border-top-left-radius(@radius) {
+  -webkit-border-top-left-radius: @radius;
+      -moz-border-radius-topleft: @radius;
+          border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius) {
+  -webkit-border-top-right-radius: @radius;
+      -moz-border-radius-topright: @radius;
+          border-top-right-radius: @radius;
+}
+.border-bottom-right-radius(@radius) {
+  -webkit-border-bottom-right-radius: @radius;
+      -moz-border-radius-bottomright: @radius;
+          border-bottom-right-radius: @radius;
+}
+.border-bottom-left-radius(@radius) {
+  -webkit-border-bottom-left-radius: @radius;
+      -moz-border-radius-bottomleft: @radius;
+          border-bottom-left-radius: @radius;
+}
+
+
+
+.ui-dropdown(){
+  display: block;
+  position: relative;
+  width: auto;
+  overflow: auto;
+  font-size: @app-font-size-1;
+  
+  &.open{
+    .dropdown-toggle{
+      background-color: @btnBackgroundHighlight;
+      color: @white;
+
+      .caret{
+        border-top-color: @white;
+      }
+    }
+  }
+   
+  .dropdown-toggle{
+    background-color: @btnBackground;
+
+    &:hover{
+      background-color: @btnBackgroundHighlight;
+      color: @white;
+      
+      .caret{
+        border-top-color: @white;
+      }
+    }
+    
+    input{
+      background-color: transparent;
+      width: 85%;
+    }
+   }
+
+    .dropdown-menu{
+     position: fixed;
+     top: auto;
+     left: auto;
+     z-index: 10000;
+     margin-top: 1px;
+   }
+}
+
+
+.ui-header(){
+  padding: 0 !important;
+  margin-right: @app-gutter-2;
+  float: left;
+  width: 70px !important;
+  display: inline-block !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+  text-align: left;
+}

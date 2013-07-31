@@ -1,0 +1,161 @@
+@import "app/components/panels/panel.css.less";
+
+.accordion{
+  list-style: none;
+  
+  > .accordion-toggle{
+    > .pull-right{
+      color: @app-text-color;
+    }
+  }
+}
+
+.accordion,
+.accordion-body{
+
+  > .accordion-group{
+    
+    &.inline{
+      > header{
+        .ui-header();
+      }
+      
+      > li{
+        display: inline-block;
+        padding: 0 @app-gutter-1 0 0;
+        margin: 0;
+      }
+    }
+    
+    &:last-child{
+      > .divider{
+        display: none;
+      }
+    }
+    
+    > .divider{
+      display: block;
+    }
+    
+  }
+}
+
+.accordion-group{
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+
+  &.active > header, settings-panel &:hover > header{
+    color: @app-text-active-color;
+  }
+  
+  &.active:last-child .accordion-body{
+   margin-bottom: 0; 
+  }
+  
+  .accordion-toggle{
+    color: @app-text-active-color;
+
+    .pull-right{
+      color: @app-text-color;
+    }
+
+    a{
+      color: @app-text-active-color;
+    }
+
+    > i,
+    > a > i{
+      margin-right: @app-gutter-2;
+    }
+  }
+  
+  .accordion-body{
+    .panel();
+    
+    background-color: transparent;
+    padding: 0;
+
+    &.in,
+    &.open{
+      height: auto;
+      overflow: auto !important;
+
+      &.shown{
+        overflow: visible;
+      }
+    }
+        
+    .group{
+      position: relative;
+
+      &.bound{
+        margin-left: @app-gutter-4 !important;
+        padding-left: @app-gutter-5 !important;
+
+        &:before{
+          content: '';
+          display: block !important;
+          border-left: 1px solid @app-line-gray !important;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      
+      &.bound.no-style{
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        
+        &:before{
+         display: none !important; 
+        }
+      }
+  
+      > header{
+        display: inline-block;
+        margin-right: @app-gutter-2;
+      }
+    }
+    
+  }   
+  
+  &.active{
+    
+    .accordion-toggle{
+      .pull-right{
+        > i{
+          color: @app-text-active-color;
+        }
+      }
+    }
+  }   
+}
+
+.accordion-group,
+.accordion-body{
+  .border-radius(0px) !important;
+  .box-shadow(0px 0px 0px rgba(0,0,0,1)) !important;
+  border: 0 !important;
+  background-color:transparent;
+
+  .group,
+  > li{
+    margin: @app-gutter-4 0;
+    padding-left: 0 !important;
+    display: block;
+    
+    &:first-child{
+      margin-top: @app-gutter-2 !important;
+    }
+    
+    &:last-child:not(.divider){
+      margin-bottom: @app-gutter-1  !important;
+    }
+  }
+}
+
+.accordion .plugin-name {
+	text-transform: uppercase;
+}

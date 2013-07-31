@@ -1,0 +1,95 @@
+@import "app/app.css.less";
+
+/* Bootstrap Globals: see:
+    https://github.com/twitter/bootstrap/blob/master/less/mixins.less 
+    https://github.com/twitter/bootstrap/blob/master/less/variables.less
+    https://github.com/seyhunak/twitter-bootstrap-rails */
+
+/* Sprites */
+@iconSpritePath: asset-path(@app-sprite);
+
+// Grays
+// -------------------------
+@black:                             @app-black;
+@grayDark:                          darken(@gray, 10%);
+@grayDarker:                        darken(@gray, 50%);
+@gray:                              @app-gray;
+@grayLight:                         lighten(@gray, 10%);
+@grayLighter:                       lighten(@gray, 50%);
+@white:                             @app-white;
+
+
+// Accent colors
+// -------------------------
+@blue:                              @app-blue;
+@blueDark:                          darken(@blue, 15%);
+@green:                             @app-green;
+@red:                               @app-red;
+@yellow:                            @app-yellow;
+@orange:                            @app-orange;
+@pink:                              @app-pink;
+@purple:                            @app-purple;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:                    @app-background-color;
+@textColor:                         @app-text-color;
+
+// Links
+// -------------------------
+@linkColor:                         @app-text-color;
+@linkColorHover:                    @app-text-active-color;
+
+
+/* Typography */
+@sansFontFamily:                    @app-font-regular;
+@headingsFontWeight:                normal;
+@baseFontSize:                      @app-font-size-2;
+@baseFontFamily:                    @sansFontFamily;
+@baseLineHeight:                    @app-line-height;
+
+/* Navbar */
+@navbarHeight:                      @app-gutter-5;
+@navbarBackground:                  @bodyBackground;
+@navbarBackgroundHighlight:         @bodyBackground;
+@navbarLinkColor:                   @app-text-color;
+@navbarLinkColorHover:              @app-text-active-color;
+
+/* Dropdowns */
+@dropdownBackground:                @white;
+@dropdownBorder:                    none;
+@dropdownLinkColor:                 @app-text-color;
+@dropdownLinkColorHover:            @app-text-active-color;
+@dropdownLinkBackgroundHover:       @gray;
+
+/* Buttons */
+/* BOB::20130311 - bootstrap mixes the background and backgroundHighlight colors for both the normal and active state.
+   Very annoying, i'm setting the colors in bootstrap_button.css.less */
+@btnBackground:                     @grayLight;
+@btnBackgroundHighlight:            @grayDarker;
+@btnBorder:                         @btnBackground;
+@btnPrimaryBackground:              @blue;
+@btnPrimaryBackgroundHighlight:     darken(@btnPrimaryBackground, 15%);
+@btnInfoBackground:                 @grayLight;
+@btnInfoBackgroundHighlight:        @btnInfoBackground;
+@btnSuccessBackground:              @green;
+@btnSuccessBackgroundHighlight:     @btnSuccessBackground;
+@btnWarningBackground:              @orange;
+@btnWarningBackgroundHighlight:     @btnWarningBackground;
+@btnDangerBackground:               @red;
+@btnDangerBackgroundHighlight:      @btnDangerBackground;
+
+// Form states and alerts
+@warningText:                       @red;
+@warningBackground:                 @red;
+@warningBorder:                     darken(spin(@warningBackground, -10), 3%);
+@errorText:                         @red;
+@errorBackground:                   @red;
+@errorBorder:                       darken(spin(@errorBackground, -10), 3%);
+@successText:                       @blue;
+@successBackground:                 @blue;
+@successBorder:                     darken(spin(@successBackground, -10), 5%);
+@infoText:                          #3a87ad;
+@infoBackground:                    #d9edf7;
+@infoBorder:                        darken(spin(@infoBackground, -10), 7%);

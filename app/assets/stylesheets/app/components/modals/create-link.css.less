@@ -1,0 +1,73 @@
+@import "app/variables.css.less";
+@import "app/mixins.css.less";
+
+.modal.create-link{
+  
+  .nav-tabs{
+    > li{
+      border-bottom: 0;
+    }
+  }
+
+  .tab-content{
+    &.website,
+    &.email {
+      width: 350px;
+    }
+  }
+  
+  .tab-content.page {
+    width: 250px;
+  }
+
+  .tab-content{
+    .transition();
+    
+    .tab-pane  *{
+      .box-sizing();
+    }
+    
+    .row{
+      .approve{
+        float:right;
+      }
+      
+       > span{
+        margin-right: @app-gutter-2;
+      }
+    }
+    
+    .input{
+      padding: @app-gutter-2;
+      margin-top: @app-gutter-1;
+      border: 1px solid @grayLight;
+      width: 100%;
+      margin-right:-20px;
+      background-color: @app-white;
+      padding-right: 32px;
+      position: relative;
+      .box-sizing();
+      
+      a{
+        position: absolute;
+        top: 0;
+        right: @app-gutter-2;
+        bottom: 0;
+        
+        i{
+          margin-top: @app-gutter-2 + 4px;
+        }
+      }
+      
+      input[type="text"]{
+        overflow:hidden;
+
+        .h2();
+      }
+    }
+  }
+  
+  .modal-footer{
+    text-align: right;
+  }
+}

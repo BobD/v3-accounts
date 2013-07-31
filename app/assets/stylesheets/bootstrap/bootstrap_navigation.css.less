@@ -1,0 +1,112 @@
+@import "app/components/panels/panel.css.less";
+
+.nav,
+.nav > .group{
+  
+  .nav-header{
+    color: @app-text-color;
+  }
+  
+   > li{
+
+     &.dropdown.open > .dropdown-toggle, 
+     &.dropdown.active > .dropdown-toggle, 
+     &.dropdown.open.active > .dropdown-toggle{
+       color: @app-text-active-color !important;
+       background-color: inherit !important;
+     }
+     
+     &.dropdown > .dropdown-toggle{
+       .caret{
+          display: none;
+        }
+     }
+     
+     &.dropdown.open{
+       background-color: @white;
+
+       > a{
+          .shadow();
+       }
+       
+       /*BOB::20130307 - hides the upper shadow of the .dropdown-menu box*/
+       > a:after {
+         content: '';
+         border: 0;
+         display: block;
+         height: 2px;
+         width: 100%;
+         background-color: white;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         z-index: 10000;
+       }
+       
+     }
+     
+     &.dropdown.open.plugins{
+       > a:after {
+         background-color: inherit;
+       }
+     }
+     
+      > a:hover, > a:focus{
+         background-color: transparent !important;
+       }
+   }
+  
+  > ul > li.dropdown > a,
+  > li.dropdown > a,
+  > button,
+  > .pull-right > li.dropdown > a{
+    padding: @app-gutter-1 @app-gutter-2;
+  }
+  
+  > .pull-right{
+    > *{
+      display:inline-block;
+      margin-left: @app-gutter-4 !important;
+    }
+  }
+}
+
+.navbar{
+  
+  .btn,
+  .btn-group {
+    margin-top: 0;
+  }
+  
+  .navbar-inner{
+    padding: 0;
+    border: 0;
+    border: none;
+    
+    .no-shadow();
+  }
+  
+  .nav{
+    float: none;
+    margin: 0;
+  }
+  
+  .nav,
+  .nav > .group{
+    > ul{
+      margin: 0;
+    }
+    
+     > ul,
+     > li{
+       display: inline-block;
+       float: none;
+       
+       a,
+       a:hover,
+       a:focus {
+         .box-shadow(0px 0px 0px) !important;
+       }
+     }
+  }
+}

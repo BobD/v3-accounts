@@ -1,0 +1,59 @@
+@import "app/mixins.css.less";
+
+.modal-backdrop{
+  background-color: @app-gray;
+}
+
+.modal{
+  overflow:hidden;
+  text-align:center;
+  padding:@app-gutter-5 @app-gutter-6;
+  margin:0 auto;
+  position:relative;
+  top:auto;
+  left:auto;
+  border: 0;
+  background-color: @white;
+  width: auto;
+  
+  .row{
+    margin-left:0;
+    padding: 0;
+  }
+  
+  .modal-header{
+    border:0;
+    padding:0;
+    position: relative;
+    
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    > .close{
+      line-height: inherit;
+    }
+    
+  }
+  
+  .modal-footer{
+    background-color:transparent;
+    text-align:inherit;
+    border:0;
+    .border-radius(0px);
+    .no-shadow();
+    
+    > a{
+      margin-left: @app-gutter-1 !important;
+      
+      &:first-child{
+        margin-left: 0 !important;
+      }
+    }
+  }
+  
+}
+
+
+

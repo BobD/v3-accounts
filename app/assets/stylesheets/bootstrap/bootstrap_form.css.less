@@ -1,0 +1,56 @@
+@import "app/mixins.css.less";
+
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: 0;
+}
+
+.radio, .checkbox {
+  min-height: auto;
+  padding-left: 0;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="checkbox"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+[contenteditable='true'],
+.uneditable-input {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  height: auto;
+  color: inherit;
+  font-size: inherit;
+  
+  .no-shadow() !important;
+  .border-radius(0px);
+  .user-select(text);
+  
+  &:focus{
+    outline: 0;
+    border-color: @app-text-color;
+    .no-shadow();
+  }
+}
+
+label{
+  margin-bottom: 0  !important;
+  font-size: inherit !important;
+}
