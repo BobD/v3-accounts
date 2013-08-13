@@ -13,14 +13,38 @@ html{
 body{
   font-size: inherit;
   line-height: inherit;
+  
+  > .sidebar{
+    
+    header {
+      @include adjust-font-size-to(18px);
+      @include padding-leader(0.25);
+      @include padding-trailer(0.25);
+    }
+    
+    p{
+      @include  adjust-font-size-to(36px);
+    }
+  }
+  
+  > .content{
+    header {
+      @include adjust-font-size-to(18px);
+      @include padding-leader(0.25);
+      @include margin-trailer(1);
+    }
+    
+    label {
+      @include  adjust-font-size-to(18px);
+      > input{
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
 }
 
-header {
-  @include adjust-font-size-to(39px);
-/*  @include margin-trailer(0.5, 39px);*/
-}
 
-p{
-  @include  adjust-font-size-to(20px);
-}
+
+
 

@@ -3,6 +3,10 @@ Account::Application.routes.draw do
   # get "application/index"
   root :to => 'application#index'
   
+  match 'profile' => 'application#profile'
+  match 'subscription' => 'application#subscription'
+  match 'uploads' => 'application#uploads'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

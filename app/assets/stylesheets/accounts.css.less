@@ -3,7 +3,7 @@
 @import "bootstrap/bootstrap_divider.css.less";
 
 @padding: 25px;
-@footer-height: 25px;
+@footer-height: 35px;
 
 html, body{
 	width: 100%;
@@ -12,8 +12,8 @@ html, body{
 
 body{
   
-  .sidebar,
-  .content{
+  > .sidebar,
+  > .content{
      > footer{
    	  left: 0;
    	  right: 0;
@@ -30,7 +30,7 @@ body{
    	}
   }
 
-	.sidebar{
+	> .sidebar{
   	float: left;
   	position: relative;
   	height: 100%;
@@ -55,7 +55,6 @@ body{
   	  
   	  > a{
     	  position: relative;
-    	  padding: 5px;
     	  display: block;
 
     	  &.active{
@@ -65,15 +64,10 @@ body{
     	  }
 
     	  > header{
-    	    font-size: 16px;
-    	    margin: 5px 0;
     	  }
 
     	  > p{
-    	    font-size: 32px;
     	    margin: 0;
-    	    margin: 5px 0;
-    	    
     	    white-space: pre;
     	    overflow: hidden;
     	    text-overflow: ellipsis;
@@ -90,7 +84,7 @@ body{
     }
   }
 
-  .content{
+  > .content{
   	width: auto;
   	height: 100%;
   	background-color: @app-white;
@@ -104,11 +98,50 @@ body{
   	
     > section{
       top: 0;
-  	  left: auto;
+  	  left: 0;
   	  right: 0;
   	  bottom: @footer-height;
       padding: @padding;
       overflow: auto;
+      
+      
+      form{
+        label{
+          max-width: 600px;
+          position: relative;
+          
+          > span{
+            width: 110px;
+            display: inline-block;
+            float: left;
+          }
+          
+          > div{
+            width: auto;
+            overflow: hidden;
+            position: relative;
+            padding-right: 25px; //icon offset
+            
+            > input{
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              color: @app-text-active-color;
+            }
+            
+            > i{
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+            
+          }
+          
+
+        }
+        
+      }
+      
     }
     
     > footer{
@@ -116,8 +149,3 @@ body{
   }
   
 }
-
-
-/*.modal{
-	width: 300px;
-}*/

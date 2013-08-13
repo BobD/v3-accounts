@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Account</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= @page_name %>">
+
+	<div class="span4 sidebar">
+		<nav class='row'>
+			<a href="/profile" class="profile  <%= 'active' if current_page?('/profile') %>">
+				<header>Profile</header>
+				<p>I. Rozovsky</p>
+			</a>
+			<div class='divider'></div>
+			<a href="/subscription" class="subscription  <%= 'active' if current_page?('/subscription') %>">
+				<header>Subscription</header>
+				<p>Trail<i class='icon-info pull-right'></i></p>
+			</a>
+			<div class='divider'></div>
+			<a href="/uploads" class="uploads  <%= 'active' if current_page?('/uploads') %>">
+				<header>Uploads left</header>
+				<p>250</p>
+			</a>
+		</nav>
+		<footer>
+			<a href="">
+				<i class='icon-left'></i>
+				<span>Back</span>
+			</a>
+		</footer>
+	</div>
+	
+	<div class="row-fluid content">
+		<section>
+			<%= yield %>
+		</section>
+		<footer>
+			<a href="">
+				<i class='icon-account'></i>
+				<span>Contact support</span>
+			</a>
+		</footer>
+    	</section>
+  	</div>
+
+</body>
+</html>
