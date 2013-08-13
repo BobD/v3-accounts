@@ -13,4 +13,5 @@
  *= require_tree ./bootstrap
  *= require_tree ./app
  *= require vertical-rhytem
+ *= require accounts
  */

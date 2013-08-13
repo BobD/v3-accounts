@@ -1,0 +1,123 @@
+@import "app/variables.css.less";
+@import "app/mixins.css.less";
+@import "bootstrap/bootstrap_divider.css.less";
+
+@padding: 25px;
+@footer-height: 25px;
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+  
+  .sidebar,
+  .content{
+     > footer{
+   	  left: 0;
+   	  right: 0;
+   	  bottom: 0;
+   	  height: @footer-height;
+   	  padding: 0 @padding;
+   	  
+   	  > a{
+        > span{
+          vertical-align: middle;
+        }
+      }
+   	  
+   	}
+  }
+
+	.sidebar{
+  	float: left;
+  	position: relative;
+  	height: 100%;
+  	margin-left: 0; // correction on boostrap -20px offset
+  	
+
+  	> .row{
+  	  margin-left: 0;  // correction on boostrap -20px offset
+  	}
+  	
+  	> nav, 
+  	> footer{
+  	  position: absolute;
+  	}
+  	
+  	> nav{
+  	  top: 0;
+  	  left: 0;
+  	  right: 0;
+  	  bottom: @footer-height;
+  	  padding: @padding;
+  	  
+  	  > a{
+    	  position: relative;
+    	  padding: 5px;
+    	  display: block;
+
+    	  &.active{
+    	    color: @app-text-active-color;
+
+    	    .list-active(@app-text-active-color, -25px);
+    	  }
+
+    	  > header{
+    	    font-size: 16px;
+    	    margin: 5px 0;
+    	  }
+
+    	  > p{
+    	    font-size: 32px;
+    	    margin: 0;
+    	    margin: 5px 0;
+    	    
+    	    white-space: pre;
+    	    overflow: hidden;
+    	    text-overflow: ellipsis;
+    	    
+    	    > i{
+    	      font-size: inherit;
+    	    }
+    	  }
+    	}
+  	}
+
+    > footer{
+      
+    }
+  }
+
+  .content{
+  	width: auto;
+  	height: 100%;
+  	background-color: @app-white;
+  	position: relative;
+  	overflow: hidden;
+  	
+  	> section, 
+  	> footer{
+  	  position: absolute;
+  	}
+  	
+    > section{
+      top: 0;
+  	  left: auto;
+  	  right: 0;
+  	  bottom: @footer-height;
+      padding: @padding;
+      overflow: auto;
+    }
+    
+    > footer{
+  	}
+  }
+  
+}
+
+
+/*.modal{
+	width: 300px;
+}*/
