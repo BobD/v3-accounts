@@ -1,6 +1,310 @@
-<header>Account</header>
+
+
 <form>
-	<label>
+	<header>Personal Information</header>
+	<label class='input-line'>
+		<span>Name</span>
+		<div>
+			<input type="text" value="" placeholder="Your first name"/>
+			<i class='icon-edit pull-right'></i>
+		</div>
+		<div class='divider'></div>
+	</label>
+	<label class='input-line'>
+		<span>Last name</span>
+		<div>
+			<input type="password" value="" placeholder="Your surname"/>
+			<i class='icon-edit pull-right'></i>
+		</div>
+		<div class='divider'></div>
+	</label>
+	<label class='input-line'>
+		<span>Country</span>
+		<div class="dropdown block">
+			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="#AF">Afghanistan</a></li>
+				<li><a href="#AL">Albania</a></li>
+				<li><a href="#DZ">Algeria</a></li>
+				<li><a href="#AS">American samoa</a></li>
+				<li><a href="#AD">Andorra</a></li>
+				<li><a href="#AO">Angola</a></li>
+				<li><a href="#AI">Anguilla</a></li>
+				<li><a href="#AQ">Antarctica</a></li>
+				<li><a href="#AG">Antigua and barbuda</a></li>
+				<li><a href="#AR">Argentina</a></li>
+				<li><a href="#AM">Armenia</a></li>
+				<li><a href="#AW">Aruba</a></li>
+				<li><a href="#AU">Australia</a></li>
+				<li><a href="#AT">Austria</a></li>
+				<li><a href="#AZ">Azerbaijan</a></li>
+				<li><a href="#BS">Bahamas</a></li>
+				<li><a href="#BH">Bahrain</a></li>
+				<li><a href="#BD">Bangladesh</a></li>
+				<li><a href="#BB">Barbados</a></li>
+				<li><a href="#BY">Belarus</a></li>
+				<li><a href="#BE">Belgium</a></li>
+				<li><a href="#BZ">Belize</a></li>
+				<li><a href="#BJ">Benin</a></li>
+				<li><a href="#BM">Bermuda</a></li>
+				<li><a href="#BT">Bhutan</a></li>
+				<li><a href="#BO">Bolivia</a></li>
+				<li><a href="#BA">Bosnia and herzegovina</a></li>
+				<li><a href="#BW">Botswana</a></li>
+				<li><a href="#BV">Bouvet island</a></li>
+				<li><a href="#BR">Brazil</a></li>
+				<li><a href="#IO">British indian ocean territory</a></li>
+				<li><a href="#BN">Brunei darussalam</a></li>
+				<li><a href="#BG">Bulgaria</a></li>
+				<li><a href="#BF">Burkina faso</a></li>
+				<li><a href="#BI">Burundi</a></li>
+				<li><a href="#KH">Cambodia</a></li>
+				<li><a href="#CM">Cameroon</a>v
+				<li><a href="#CA">Canada</a></li>
+				<li><a href="#CV">Cape verde</a></li>
+				<li><a href="#KY">Cayman islands</a></li>
+				<li><a href="#CF">Central african republic</a></li>
+				<li><a href="#TD">Chad</a></li>
+				<li><a href="#CL">Chile</a></li>
+				<li><a href="#CN">China</a></li>
+				<li><a href="#CX">Christmas island</a></li>
+				<li><a href="#CC">Cocos (keeling) islands</a></li>
+				<li><a href="#CO">Colombia</a></li>
+				<li><a href="#KM">Comoros</a></li>
+				<li><a href="#CG">Congo</a></li>
+				<li><a href="#CD">Congo, the democratic republic of the</a></li>
+				<li><a href="#CK">Cook islands</a></li>
+				<li><a href="#CR">Costa rica</a></li>
+				<li><a href="#CI">Cote d'ivoire</a></li>
+				<li><a href="#HR">Croatia</a></li>
+				<li><a href="#CU">Cuba</a></li>
+				<li><a href="#CY">Cyprus</a></li>
+				<li><a href="#CZ">Czech republic</a></li>
+				<li><a href="#DK">Denmark</a></li>
+				<li><a href="#DJ">Djibouti</a></li>
+				<li><a href="#DM">Dominica</a></li>
+				<li><a href="#DO">Dominican republic</a></li>
+				<li><a href="#EC">Ecuador</a></li>
+				<li><a href="#EG">Egypt</a></li>
+				<li><a href="#SV">El salvador</a></li>
+				<li><a href="#GQ">Equatorial guinea</a></li>
+				<li><a href="#ER">Eritrea</a></li>
+				<li><a href="#EE">Estonia</a></li>
+				<li><a href="#ET">Ethiopia</a></li>
+				<li><a href="#FK">Falkland islands (malvinas)</a></li>
+				<li><a href="#FO">Faroe islands</a></li>
+				<li><a href="#FJ">Fiji</a></li>
+				<li><a href="#FI">Finland</a></li>
+				<li><a href="#FR">France</a></li>
+				<li><a href="#GF">French guiana</a></li>
+				<li><a href="#PF">French polynesia</a></li>
+				<li><a href="#TF">French southern territories</a></li>
+				<li><a href="#GA">Gabon</a></li>
+				<li><a href="#GM">Gambia</a></li>
+				<li><a href="#GE">Georgia</a></li>
+				<li><a href="#DE">Germany</a></li>
+				<li><a href="#GH">Ghana</a></li>
+				<li><a href="#GI">Gibraltar</a></li>
+				<li><a href="#GR">Greece</a></li>
+				<li><a href="#GL">Greenland</a></li>
+				<li><a href="#GD">Grenada</a></li>
+				<li><a href="#GP">Guadeloupe</a></li>
+				<li><a href="#GU">Guam</a></li>
+				<li><a href="#GT">Guatemala</a></li>
+				<li><a href="#GG">Guernsey</a></li>
+				<li><a href="#GN">Guinea</a></li>
+				<li><a href="#GW">Guinea-bissau</a></li>
+				<li><a href="#GY">Guyana</a></li>
+				<li><a href="#HT">Haiti</a></li>
+				<li><a href="#HM">Heard island and mcdonald islands</a></li>
+				<li><a href="#VA">Holy see (vatican city state)</a></li>
+				<li><a href="#HN">Honduras</a></li>
+				<li><a href="#HK">Hong kong</a></li>
+				<li><a href="#HU">Hungary</a></li>
+				<li><a href="#IS">Iceland</a></li>
+				<li><a href="#IN">India</a></li>
+				<li><a href="#ID">Indonesia</a></li>
+				<li><a href="#IR">Iran, islamic republic of</a></li>
+				<li><a href="#IQ">Iraq</a></li>
+				<li><a href="#IE">Ireland</a></li>
+				<li><a href="#IM">Isle of man</a></li>
+				<li><a href="#IL">Israel</a></li>
+				<li><a href="#IT">Italy</a></li>
+				<li><a href="#JM">Jamaica</a></li>
+				<li><a href="#JP">Japan</a></li>
+				<li><a href="#JE">Jersey</a></li>
+				<li><a href="#JO">Jordan</a></li>
+				<li><a href="#KZ">Kazakhstan</a></li>
+				<li><a href="#KE">Kenya</a></li>
+				<li><a href="#KI">Kiribati</a></li>
+				<li><a href="#KP">Korea, democratic people's republic of</a></li>
+				<li><a href="#KR">Korea, republic of</a></li>
+				<li><a href="#KW">Kuwait</a></li>
+				<li><a href="#KG">Kyrgyzstan</a></li>
+				<li><a href="#LA">Lao people's democratic republic</a></li>
+				<li><a href="#LV">Latvia</a></li>
+				<li><a href="#LB">Lebanon</a></li>
+				<li><a href="#LS">Lesotho</a></li>
+				<li><a href="#LR">Liberia</a></li>
+				<li><a href="#LY">Libyan arab jamahiriya</a></li>
+				<li><a href="#LI">Liechtenstein</a></li>
+				<li><a href="#LT">Lithuania</a></li>
+				<li><a href="#LU">Luxembourg</a></li>
+				<li><a href="#MO">Macao</a></li>
+				<li><a href="#MK">Macedonia, the former yugoslav republic of</a></li>
+				<li><a href="#MG">Madagascar</a></li>
+				<li><a href="#MW">Malawi</a></li>
+				<li><a href="#MY">Malaysia</a></li>
+				<li><a href="#MV">Maldives</a></li>
+				<li><a href="#ML">Mali</a></li>
+				<li><a href="#MT">Malta</a></li>
+				<li><a href="#MH">Marshall islands</a></li>
+				<li><a href="#MQ">Martinique</a></li>
+				<li><a href="#MR">Mauritania</a></li>
+				<li><a href="#MU">Mauritius</a></li>
+				<li><a href="#YT">Mayotte</a></li>
+				<li><a href="#MX">Mexico</a></li>
+				<li><a href="#FM">Micronesia, federated states of</a></li>
+				<li><a href="#MD">Moldova, republic of</a></li>
+				<li><a href="#MC">Monaco</a></li>
+				<li><a href="#MN">Mongolia</a></li>
+				<li><a href="#ME">Montenegro</a></li>
+				<li><a href="#MS">Montserrat</a></li>
+				<li><a href="#MA">Morocco</a></li>
+				<li><a href="#MZ">Mozambique</a></li>
+				<li><a href="#MM">Myanmar</a></li>
+				<li><a href="#NA">Namibia</a></li>
+				<li><a href="#NR">Nauru</a></li>
+				<li><a href="#NP">Nepal</a></li>
+				<li><a href="#NL">Netherlands</a></li>
+				<li><a href="#AN">Netherlands antilles</a></li>
+				<li><a href="#NC">New caledonia</a></li>
+				<li><a href="#NZ">New zealand</a></li>
+				<li><a href="#NI">Nicaragua</a></li>
+				<li><a href="#NE">Niger</a></li>
+				<li><a href="#NG">Nigeria</a></li>
+				<li><a href="#NU">Niue</a></li>
+				<li><a href="#NF">Norfolk island</a></li>
+				<li><a href="#MP">Northern mariana islands</a></li>
+				<li><a href="#NO">Norway</a></li>
+				<li><a href="#OM">Oman</a></li>
+				<li><a href="#PK">Pakistan</a></li>
+				<li><a href="#PW">Palau</a></li>
+				<li><a href="#PS">Palestinian territory, occupied</a></li>
+				<li><a href="#PA">Panama</a></li>
+				<li><a href="#PG">Papua new guinea</a></li>
+				<li><a href="#PY">Paraguay</a></li>
+				<li><a href="#PE">Peru</a></li>
+				<li><a href="#PH">Philippines</a></li>
+				<li><a href="#PN">Pitcairn</a></li>
+				<li><a href="#PL">Poland</a></li>
+				<li><a href="#PT">Portugal</a></li>
+				<li><a href="#PR">Puerto rico</a></li>
+				<li><a href="#QA">Qatar</a></li>
+				<li><a href="#RE">Reunion</a></li>
+				<li><a href="#RO">Romania</a></li>
+				<li><a href="#RU">Russian federation</a></li>
+				<li><a href="#RW">Rwanda</a></li>
+				<li><a href="#SH">Saint helena</a></li>
+				<li><a href="#KN">Saint kitts and nevis</a></li>
+				<li><a href="#LC">Saint lucia</a></li>
+				<li><a href="#PM">Saint pierre and miquelon</a></li>
+				<li><a href="#VC">Saint vincent and the grenadines</a></li>
+				<li><a href="#WS">Samoa</a></li>
+				<li><a href="#SM">San marino</a></li>
+				<li><a href="#ST">Sao tome and principe</a></li>
+				<li><a href="#SA">Saudi arabia</a>v
+				<li><a href="#SN">Senegal</a></li>
+				<li><a href="#RS">Serbia</a></li>
+				<li><a href="#SC">Seychelles</a></li>
+				<li><a href="#SL">Sierra leone</a></li>
+				<li><a href="#SG">Singapore</a></li>
+				<li><a href="#SK">Slovakia</a></li>
+				<li><a href="#SI">Slovenia</a></li>
+				<li><a href="#SB">Solomon islands</a></li>
+				<li><a href="#SO">Somalia</a></li>
+				<li><a href="#ZA">South africa</a></li>
+				<li><a href="#GS">South georgia and the south sandwich islands</a></li>
+				<li><a href="#ES">Spain</a></li>
+				<li><a href="#LK">Sri lanka</a></li>
+				<li><a href="#SD">Sudan</a></li>
+				<li><a href="#SR">Suriname</a></li>
+				<li><a href="#SJ">Svalbard and jan mayen</a></li>
+				<li><a href="#SZ">Swaziland</a></li>
+				<li><a href="#SE">Sweden</a></li>
+				<li><a href="#CH">Switzerland</a></li>
+				<li><a href="#SY">Syrian arab republic</a></li>
+				<li><a href="#TW">Taiwan, province of china</a></li>
+				<li><a href="#TJ">Tajikistan</a></li>
+				<li><a href="#TZ">Tanzania, united republic of</a></li>
+				<li><a href="#TH">Thailand</a></li>
+				<li><a href="#TL">Timor-leste</a></li>
+				<li><a href="#TG">Togo</a></li>
+				<li><a href="#TK">Tokelau</a></li>
+				<li><a href="#TO">Tonga</a></li>
+				<li><a href="#TT">Trinidad and tobago</a></li>
+				<li><a href="#TN">Tunisia</a></li>
+				<li><a href="#TR">Turkey</a></li>
+				<li><a href="#TM">Turkmenistan</a></li>
+				<li><a href="#TC">Turks and caicos islands</a></li>
+				<li><a href="#TV">Tuvalu</a></li>
+				<li><a href="#UG">Uganda</a></li>
+				<li><a href="#UA">Ukraine</a></li>
+				<li><a href="#AE">United arab emirates</a></li>
+				<li><a href="#GB">United kingdom</a></li>
+				<li><a href="#US">United states</a></li>
+				<li><a href="#UM">United states minor outlying islands</a></li>
+				<li><a href="#UY">Uruguay</a></li>
+				<li><a href="#UZ">Uzbekistan</a></li>
+				<li><a href="#VU">Vanuatu</a></li>
+				<li><a href="#VE">Venezuela</a></li>
+				<li><a href="#VN">Viet nam</a></li>
+				<li><a href="#VG">Virgin islands, british</a></li>
+				<li><a href="#VI">Virgin islands, u.s.</a></li>
+				<li><a href="#WF">Wallis and futuna</a></li>
+				<li><a href="#EH">Western sahara</a></li>
+				<li><a href="#YE">Yemen</a></li>
+				<li><a href="#ZM">Zambia</a></li>
+				<li><a href="#ZW">Zimbabwe</a></li>
+				<li><a href="#AX">Åland islands</a></li>				
+			</ul>
+		</div>
+		<div class='divider'></div>
+	</label>
+	<label class='input-line'>
+		<span>Profession</span>
+		<div class="dropdown block">
+			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="#architecture">Architecture</a></li>
+				<li><a href="#art_direction">Art Direction</a></li>
+				<li><a href="#copywriting">Copywriting</a></li>
+				<li><a href="#fashion_design">Fashion Design</a></li>
+				<li><a href="#film">Film</a></li>
+				<li><a href="#fine_art">Fine Art</a></li>
+				<li><a href="#graphic_design">Graphic Design</a></li>
+				<li><a href="#illustration">Illustration</a></li>
+				<li><a href="#industrial_design">Industrial Design</a></li>
+				<li><a href="#interaction_design">Interaction Design</a></li>
+				<li><a href="#interior_design">Interior Design</a></li>
+				<li><a href="#landscape_design">Landscape Design</a></li>
+				<li><a href="#modeling">Modeling</a></li>
+				<li><a href="#other">Other</a></li>
+				<li><a href="#photography">Photography</a></li>
+				<li><a href="#web_design">Web &amp; new Media Design</a></li>			
+			</ul>
+		</div>
+		<div class='divider'></div>
+	</label>
+</form>
+
+<form>
+	<header>Account</header>
+	<label class='input-line'>
 		<span>Username</span>
 		<div>
 			<input type="text" value="" placeholder="Your name"/>
@@ -8,7 +312,7 @@
 		</div>
 		<div class='divider'></div>
 	</label>
-	<label>
+	<label class='input-line'>
 		<span>Password</span>
 		<div>
 			<input type="password" value="" placeholder="Your password"/>
@@ -16,7 +320,7 @@
 		</div>
 		<div class='divider'></div>
 	</label>
-	<label>
+	<label class='input-line'>
 		<span>Domain</span>
 		<div>
 			<input type="text" value="" placeholder="Your domain"/>
@@ -24,11 +328,56 @@
 		</div>
 		<div class='divider'></div>
 	</label>
-	<label>
+	<label class='input-line'>
 		<span>Email</span>
 		<div>
 			<input type="text" value="" placeholder="Your email"/>
 			<i class='icon-edit pull-right'></i>
+		</div>
+		<div class='divider'></div>
+	</label>
+</form>
+
+
+<form>
+	<header>Feeds</header>
+	<label class='input-line'>
+		<span>Analytics</span>
+		<div>
+			<input type="text" value="" placeholder="Your name"/>
+			<i class='icon-link pull-right'></i>
+		</div>
+		<div class='divider'></div>
+	</label>
+	<label class='input-line'>
+		<span>Vimeo</span>
+		<div>
+			<input type="password" value="" placeholder="Your password"/>
+			<i class='icon-link pull-right'></i>
+		</div>
+		<div class='divider'></div>
+	</label>
+	<label class='input-line'>
+		<span>Dropbox</span>
+		<div>
+			<input type="text" value="" placeholder="Your domain"/>
+			<i class='icon-link pull-right'></i>
+		</div>
+		<div class='divider'></div>
+	</label>
+	<label class='input-line'>
+		<span>Tumblr</span>
+		<div>
+			<input type="text" value="" placeholder="Your email"/>
+			<i class='icon-link pull-right'></i>
+		</div>
+		<div class='divider'></div>
+	</label>
+	<label class='input-line'>
+		<span>Twitter</span>
+		<div>
+			<input type="text" value="" placeholder="Your email"/>
+			<i class='icon-link pull-right'></i>
 		</div>
 		<div class='divider'></div>
 	</label>

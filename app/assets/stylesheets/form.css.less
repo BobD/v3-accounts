@@ -1,0 +1,79 @@
+@import "app/variables.css.less";
+@import "app/mixins.css.less";
+@import "bootstrap/bootstrap_divider.css.less";
+
+form{
+  > header{
+    color: @app-text-active-color;
+  }
+}
+
+label.input-line{
+  max-width: 650px;
+  position: relative;
+  
+  > span{
+    width: 110px;
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+  }
+  
+  > div{
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    padding-right: 25px; //icon offset
+    
+    &.dropdown{
+      display: block;
+      width: auto;
+      padding: 0 !important;
+      
+      > .dropdown-toggle{
+        width: 100%;
+        padding: 0 !important;
+        line-height: inherit;
+        
+        &:hover{
+          color: inherit;
+        }
+        
+        > .caret{
+          .icon();
+          
+          border: 0;
+          width: auto;
+          height: auto;
+          margin-top: 0;
+
+          &:before{
+            content: '\002E';
+          }
+        }
+      }
+      
+      > .dropdown-menu{
+        position: fixed;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin-top: -25px;
+      }
+    }
+    
+    > input{
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: @app-text-active-color;
+    }
+    
+    > i{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
