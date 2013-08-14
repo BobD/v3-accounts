@@ -1,0 +1,152 @@
+@import "app/variables.css.less";
+@import "app/mixins.css.less";
+@import "bootstrap/bootstrap_divider.css.less";
+
+.listing{
+
+  > .line{
+    position: relative;
+
+    > span{
+      width: 110px;
+      display: inline-block;
+      float: left;
+      margin-top: 3px;
+    }
+
+    > div{
+      width: auto;
+      overflow: hidden;
+      position: relative;
+      padding-right: 25px; //icon offset
+
+      &.dropdown{
+        display: block;
+        width: auto;
+        padding: 0 !important;
+
+        > .dropdown-toggle{
+          width: 100%;
+          padding: 0 !important;
+          line-height: inherit;
+
+          &:hover{
+            color: inherit;
+          }
+
+          > .caret{
+            .icon();
+
+            border: 0;
+            width: auto;
+            height: auto;
+            margin-top: 0;
+
+            &:before{
+              content: '\002E';
+            }
+          }
+        }
+
+        > .dropdown-menu{
+          position: fixed;
+          top: auto;
+          left: auto;
+          right: auto;
+          bottom: auto;
+          margin-top: -25px;
+        }
+      }
+
+      > input{
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: @app-text-active-color;
+      }
+
+      > i{
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+.horizontal-list{
+ > *{
+  display: inline-block;
+  vertical-align: middle;
+  
+  &:after{
+    .d-vertical();
+    
+    content: '';
+    height: 100%;
+    width: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 100%;
+    margin: 0 @app-gutter-2 !important;
+  }
+  
+  &:last-child{
+    &:after{
+      display: none;
+    }
+  }
+  
+ } 
+}
+
+.subscriptions{
+  position: relative;
+  
+  > li{
+    overflow: hidden;
+    
+    &:after{
+      /* divider */
+      height: 145px !important;
+      margin: 0 @app-gutter-5 !important;
+    }
+    
+    
+    > a{
+      display: inline-block;
+      vertical-align: middle;
+      width: 165px;
+      color: @app-text-active-color;
+      
+      .header{
+        text-transform: uppercase;
+      }
+
+      .price{
+        text-align: center;
+
+        > small{
+          display: block;
+          color: @app-text-color;
+        }
+
+        > span{
+          vertical-align: middle;
+          display: inline-block;
+
+          &:first-letter{
+            vertical-align: text-bottom;
+            font-size: 50%;
+          }
+        }
+      }
+
+      button{
+        > i{
+          margin-right: @app-gutter-2 !important;
+        }
+      }
+    }
+  }
+}

@@ -90,18 +90,19 @@ body{
   	position: relative;
   	overflow: hidden;
   	
-  	> section, 
+  	> div, 
   	> footer{
   	  position: absolute;
   	}
   	
-    > section{
+    > div{
       top: 0;
   	  left: 0;
   	  right: 0;
   	  bottom: @footer-height;
       padding: @padding;
       overflow: auto;
+      max-width: 900px;
     }
     
     > footer{

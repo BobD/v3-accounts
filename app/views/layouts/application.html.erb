@@ -10,18 +10,18 @@
 
 	<div class="span4 sidebar">
 		<nav class='row'>
-			<a href="/profile" class="profile  <%= 'active' if current_page?('/profile') %>">
-				<header>Profile</header>
+			<a href="/profile" class="header profile  <%= 'active' if current_page?('/profile') %>">
+				<h1>Profile</h1>
 				<p>I. Rozovsky</p>
 			</a>
 			<div class='divider'></div>
-			<a href="/subscription" class="subscription  <%= 'active' if current_page?('/subscription') %>">
-				<header>Subscription</header>
+			<a href="/subscription" class="header subscription  <%= 'active' if current_page?('/subscription') %>">
+				<h1>Subscription</h1>
 				<p>Trail<i class='icon-info pull-right'></i></p>
 			</a>
 			<div class='divider'></div>
-			<a href="/uploads" class="uploads  <%= 'active' if current_page?('/uploads') %>">
-				<header>Uploads left</header>
+			<a href="/uploads" class="header uploads  <%= 'active' if current_page?('/uploads') %>">
+				<h1>Uploads left</h1>
 				<p>250</p>
 			</a>
 		</nav>
@@ -34,9 +34,9 @@
 	</div>
 	
 	<div class="row-fluid content">
-		<section>
+		<div>
 			<%= yield %>
-		</section>
+		</div>
 		<footer>
 			<a href="">
 				<i class='icon-account'></i>

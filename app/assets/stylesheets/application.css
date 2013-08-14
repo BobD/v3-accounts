@@ -12,7 +12,8 @@
  *= require bootstrap_and_overrides
  *= require_tree ./bootstrap
  *= require_tree ./app
- *= require vertical-rhytem
- *= require accounts
- *= require form
+ *= require layout
+ *= require vertical-rhythm
+ *= require styles
+ *= require ui
  */

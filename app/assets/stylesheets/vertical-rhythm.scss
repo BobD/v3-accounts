@@ -1,0 +1,93 @@
+@import 'compass';
+/* SEe http://compass-style.org/reference/compass/typography/vertical_rhythm/*/
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+/*$min-line-padding: 1px;*/
+
+@include establish-baseline;
+
+
+html{
+}
+
+body{
+  font-size: inherit;
+  line-height: inherit;
+  
+  header,
+  .header{
+
+   @include adjust-font-size-to(16px);
+   @include margin-leader(0.25);
+   @include margin-trailer(0.25);
+
+   h1{
+     font-size: inherit; 
+     padding: inherit;
+     margin: inherit;
+     line-height: inherit;
+   }
+   
+   > p{
+     @include  adjust-font-size-to(32px);
+     @include padding-leader(0);
+     @include padding-trailer(0);
+    } 
+  }
+  
+  > .sidebar{
+  }
+  
+  > .content{  
+    
+    > div{
+     > section{
+        @include margin-trailer(2);
+        > header{
+          @include margin-trailer(1);
+        }
+     } 
+    }
+    
+    label{
+      @include  adjust-font-size-to(18px);
+      > input{
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}
+
+.subscriptions{
+  > li{
+    
+    .header{
+      @include  adjust-font-size-to(15px); 
+      @include padding-leader(0);
+      @include padding-trailer(0);
+    }
+    
+    .price{
+      @include  adjust-font-size-to(34px);
+      @include padding-leader(0.35);
+      @include padding-trailer(0.35);
+      
+      > small{
+       @include  adjust-font-size-to(5px, 0);
+      }
+    }
+    
+    button{
+      @include padding-leader(0.25);
+      @include padding-trailer(0.25);
+      @include  adjust-font-size-to(15px);
+    }
+  } 
+}
+
+
+
+
+
