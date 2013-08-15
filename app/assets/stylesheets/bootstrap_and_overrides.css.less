@@ -5,3 +5,19 @@
 /* BOB 20130805 - Extra overrides on boostrap besides the ones from the v3 app. 
                 - Need to check if these will bve ported back
 */
+.nav{
+  
+  &.nav-stacked{
+    
+    > li{
+      float: none !important;
+      border: 0;
+      padding: 0 !important;
+    }
+    
+    &+.tab-content{
+      margin-top: 10px;
+    }
+    
+  }  
+}

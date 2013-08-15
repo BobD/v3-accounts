@@ -64,28 +64,40 @@ body{
   > li{
     
     .header{
-      @include  adjust-font-size-to(15px); 
+      @include adjust-font-size-to(15px); 
       @include padding-leader(0);
       @include padding-trailer(0);
     }
     
     .price{
-      @include  adjust-font-size-to(34px);
+      @include adjust-font-size-to(34px);
       @include padding-leader(0.35);
       @include padding-trailer(0.35);
       
       > small{
-       @include  adjust-font-size-to(5px, 0);
+       @include adjust-font-size-to(5px, 0);
       }
     }
     
     button{
       @include padding-leader(0.25);
       @include padding-trailer(0.25);
-      @include  adjust-font-size-to(15px);
+      @include adjust-font-size-to(15px);
     }
   } 
 }
+
+.nav{
+  
+  &.nav-stacked{
+  
+    &+.tab-content{
+      @include margin-leader(1);
+    }
+    
+  }  
+}
+
 
 
 
