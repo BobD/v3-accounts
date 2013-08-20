@@ -15,27 +15,27 @@
 		<nav class='row'>
 			<a href="/profile" class="header profile  <%= 'active' if current_page?('/profile') %>">
 				<h1>Profile</h1>
-				<p>I. Rozovsky</p>
+				<p><span>I. Rozovsky</span></p>
 			</a>
 			<div class='divider'></div>
 			<a href="/subscription/trial" class="header subscription  <%= 'active' if current_page?('/subscription/trial') %>">
 				<h1>Subscription</h1>
-				<p>Trial</p>
+				<p><span>Trial</span></p>
 			</a>
 			<div class='divider'></div>
 			<a href="/subscription/monthly" class="header subscription  <%= 'active' if current_page?('/subscription/monthly') %>">
 				<h1>Subscription</h1>
-				<p>Monthly <i class='icon-alert pull-right'></i></p>
+				<p><span>Monthly</span> <i class='icon-alert pull-right'></i></p>
 			</a>
 			<div class='divider'></div>
 			<a href="/subscription/updating" class="header subscription  <%= 'active' if current_page?('/subscription/updating') %>">
 				<h1>Subscription</h1>
-				<p>Updating...</i></p>
+				<p><span>Updating...</span></p>
 			</a>
 			<div class='divider'></div>
 			<a href="/uploads" class="header uploads  <%= 'active' if current_page?('/uploads') %>">
 				<h1>Uploads left</h1>
-				<p>1224</p>
+				<p><span>1224</span></p>
 			</a>
 			
 			<div class="push"></div>
@@ -56,8 +56,9 @@
 			<div class="push"></div>
 		</div>
 		<footer>
-			<a href="">
+			<a href="" class="btn btn-ish support">
 				<i class='icon-account'></i>
+				<i class='icon-help'></i>
 				<span>Contact support</span>
 			</a>
 		</footer>

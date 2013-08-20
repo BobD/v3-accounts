@@ -65,13 +65,20 @@ body{
 
     	  > p{
     	    margin: 0;
-    	    white-space: pre;
-    	    overflow: hidden;
-    	    text-overflow: ellipsis;
+ 
+    	    
+    	    > span{
+    	      white-space: pre-wrap;
+      	    overflow: hidden;
+      	    text-overflow: ellipsis;
+      	    width: 80%;
+      	    display: inline-block;
+    	    }
     	    
     	    > i{
     	      font-size: inherit;
     	    }
+    	    
     	  }
     	}
   	}
@@ -92,6 +99,19 @@ body{
     }
     
     > footer{
+      .support{
+        
+        > *{
+          display: inline-block;
+          vertical-align: middle;
+        }
+        
+        > i[class='icon-help']{
+          vertical-align: text-bottom;
+          margin-left: -8px;
+          color: @app-text-color;
+        }
+      }
   	}
   }
   
@@ -99,14 +119,19 @@ body{
   &.uploads{
     
     > .content{
-
-      > div{
-        padding: 0;
-        bottom: 0;
+      padding: 0;
         
+      > div{
+        height: 100% !important;
+        
+        > .push{
+          display: none;
+        }
+
         > section{
           max-width: 100%;
           margin: 0;
+          height: 100%;
           
           > div{
             padding: 0;

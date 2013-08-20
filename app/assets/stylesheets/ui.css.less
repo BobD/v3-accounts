@@ -55,6 +55,11 @@
       width: auto;
       overflow: hidden;
       position: relative;
+      
+      > .pull-right:not(a),
+      &.dropdown > .dropdown-toggle{
+        color: @app-text-color;
+      }
 
       &.dropdown{
         display: block;
@@ -134,6 +139,10 @@
   > *{
    display: inline-block;
    vertical-align: middle;
+  }
+  
+  > header{
+    margin-right: @app-gutter-2;
   }
   
   > li{

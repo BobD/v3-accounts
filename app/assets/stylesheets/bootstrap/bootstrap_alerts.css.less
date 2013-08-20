@@ -1,5 +1,17 @@
+@import "app/variables.css.less";
+
 .alert {
   text-shadow: none !important;
   color: inherit;
   border: 0;
+  
+  > strong{
+    font-weight: inherit;
+  }
+  
+  &.alert-error{
+    > strong{
+/*     color: @red; */
+    }
+  }
 }
