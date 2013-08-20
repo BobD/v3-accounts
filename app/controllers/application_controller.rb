@@ -10,8 +10,18 @@ class ApplicationController < ActionController::Base
     render @page_name
   end
   
-  def subscription
-    @page_name = 'subscription'
+  def subscription_trial
+    @page_name = 'subscription_trial'
+    render @page_name
+  end
+  
+  def subscription_monthly
+    @page_name = 'subscription_monthly'
+    render @page_name
+  end
+  
+  def subscription_updating
+    @page_name = 'subscription_updating'
     render @page_name
   end
   

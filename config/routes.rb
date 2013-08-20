@@ -4,7 +4,10 @@ Account::Application.routes.draw do
   root :to => 'application#index'
   
   match 'profile' => 'application#profile'
-  match 'subscription' => 'application#subscription'
+  match 'subscription/trial' => 'application#subscription_trial'
+  match 'subscription/monthly' => 'application#subscription_monthly'
+  match 'subscription/yearly' => 'application#subscription_yearly'
+  match 'subscription/updating' => 'application#subscription_updating'
   match 'uploads' => 'application#uploads'
   
   # The priority is based upon order of creation:

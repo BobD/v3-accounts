@@ -13,7 +13,7 @@
  *= require_tree ./bootstrap
  *= require_tree ./app
  *= require layout
- *= require vertical-rhythm
  *= require styles
  *= require ui
+ *= require vertical-rhythm
  */

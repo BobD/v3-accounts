@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Account</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body class="<%= @page_name %>">
 
 	<div class="span4 sidebar">
+		
 		<nav class='row'>
 			<a href="/profile" class="header profile  <%= 'active' if current_page?('/profile') %>">
 				<h1>Profile</h1>
 				<p>I. Rozovsky</p>
 			</a>
 			<div class='divider'></div>
-			<a href="/subscription" class="header subscription  <%= 'active' if current_page?('/subscription') %>">
+			<a href="/subscription/trial" class="header subscription  <%= 'active' if current_page?('/subscription/trial') %>">
 				<h1>Subscription</h1>
-				<p>Trail<i class='icon-info pull-right'></i></p>
+				<p>Trial</p>
+			</a>
+			<div class='divider'></div>
+			<a href="/subscription/monthly" class="header subscription  <%= 'active' if current_page?('/subscription/monthly') %>">
+				<h1>Subscription</h1>
+				<p>Monthly <i class='icon-alert pull-right'></i></p>
+			</a>
+			<div class='divider'></div>
+			<a href="/subscription/updating" class="header subscription  <%= 'active' if current_page?('/subscription/updating') %>">
+				<h1>Subscription</h1>
+				<p>Updating...</i></p>
 			</a>
 			<div class='divider'></div>
 			<a href="/uploads" class="header uploads  <%= 'active' if current_page?('/uploads') %>">
 				<h1>Uploads left</h1>
-				<p>250</p>
+				<p>1224</p>
 			</a>
+			
+			<div class="push"></div>
 		</nav>
+		
 		<footer>
 			<a href="">
 				<i class='icon-left'></i>
 				<span>Back</span>
 			</a>
 		</footer>
+		
 	</div>
 	
 	<div class="row-fluid content">
 		<div>
 			<%= yield %>
+			<div class="push"></div>
 		</div>
 		<footer>
 			<a href="">

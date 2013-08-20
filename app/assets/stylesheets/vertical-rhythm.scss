@@ -19,20 +19,18 @@ body{
   .header{
 
    @include adjust-font-size-to(16px);
-   @include margin-leader(0.25);
-   @include margin-trailer(0.25);
+   @include margin-leader(0.5);
+   @include margin-trailer(0.5);
 
    h1{
      font-size: inherit; 
-     padding: inherit;
-     margin: inherit;
+     padding: 0;
+     margin: 0;
      line-height: inherit;
    }
    
    > p{
-     @include  adjust-font-size-to(32px);
-     @include padding-leader(0);
-     @include padding-trailer(0);
+     @include adjust-font-size-to(30px, 2);
     } 
   }
   
@@ -43,20 +41,15 @@ body{
     
     > div{
      > section{
-        @include margin-trailer(2);
-        > header{
-          @include margin-trailer(1);
-        }
+        @include margin-trailer(2.5);
      } 
     }
-    
-    label{
-      @include  adjust-font-size-to(18px);
-      > input{
-        font-size: inherit;
-        line-height: inherit;
-      }
-    }
+  }
+}
+
+.list{
+  > .line{
+    @include adjust-font-size-to(16px, 2);
   }
 }
 
@@ -98,8 +91,8 @@ body{
   }  
 }
 
-
-
-
+.divider{
+  margin: 0.5em 0 !important;
+}
 
 

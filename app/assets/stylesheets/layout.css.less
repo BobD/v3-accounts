@@ -14,45 +14,45 @@ body{
   
   > .sidebar,
   > .content{
+    padding: @padding / 2 @padding 0 @padding;
+    height: 100%;
+    
+    .box-sizing();
+    
+    /* See http://ryanfait.com/html5-sticky-footer/*/
+    > nav,
+    > div{
+  	  min-height: 100%;
+    	height: auto !important;
+    	height: 100%;
+    	margin: 0 auto -@footer-height; /* the bottom margin is the negative value of the footer's height */
+    }
+    
+    .push,
+    > footer{
+      height: @footer-height;
+    }
+    /* --- */
+    
      > footer{
-   	  left: 0;
-   	  right: 0;
-   	  bottom: 0;
-   	  height: @footer-height;
-   	  padding: 0 @padding;
-   	  
    	  > a{
         > span{
           vertical-align: middle;
         }
-      }
-   	  
+      } 
    	}
   }
 
 	> .sidebar{
   	float: left;
   	position: relative;
-  	height: 100%;
   	margin-left: 0; // correction on boostrap -20px offset
-  	
-
+  	  	
   	> .row{
   	  margin-left: 0;  // correction on boostrap -20px offset
   	}
   	
-  	> nav, 
-  	> footer{
-  	  position: absolute;
-  	}
-  	
-  	> nav{
-  	  top: 0;
-  	  left: 0;
-  	  right: 0;
-  	  bottom: @footer-height;
-  	  padding: @padding;
-  	  
+  	> nav{  	  
   	  > a{
     	  position: relative;
     	  display: block;
@@ -61,9 +61,6 @@ body{
     	    color: @app-text-active-color;
 
     	    .list-active(@app-text-active-color, -25px);
-    	  }
-
-    	  > header{
     	  }
 
     	  > p{
@@ -78,29 +75,15 @@ body{
     	  }
     	}
   	}
-
-    > footer{
-    }
   }
 
   > .content{
   	width: auto;
-  	height: 100%;
   	background-color: @app-white;
   	position: relative;
-  	overflow: hidden;
-  	
-  	> div, 
-  	> footer{
-  	  position: absolute;
-  	}
+  	overflow: auto;
   	
     > div{
-      top: 0;
-  	  left: 0;
-  	  right: 0;
-  	  bottom: @footer-height;
-      padding: @padding;
       overflow: auto;
       
       > section{
@@ -111,6 +94,40 @@ body{
     > footer{
   	}
   }
+  
+  
+  &.uploads{
+    
+    > .content{
+
+      > div{
+        padding: 0;
+        bottom: 0;
+        
+        > section{
+          max-width: 100%;
+          margin: 0;
+          
+          > div{
+            padding: 0;
+            overflow: hidden;
+            
+            > header{
+              padding: @padding;
+              margin: 0;
+            }
+          }
+        }
+      }
+   
+     > footer{
+       display: none;
+     }
+   
+    }
+  }
+
+  
 }
 
 

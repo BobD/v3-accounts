@@ -2,7 +2,44 @@
 @import "app/mixins.css.less";
 @import "bootstrap/bootstrap_divider.css.less";
 
+
 .listing{
+  > .accordion-group{
+    > .accordion-heading{
+      > .accordion-toggle{
+        
+        &:after{
+          content: 'Less';
+          display: inline-block;
+        }
+        
+        &:before{
+          content: '\002C';
+          display: inline-block;
+          
+          .icon();
+        }
+        
+        &.collapsed{
+          
+          &:after{
+            content: 'More';
+            display: inline-block;
+          }
+          
+          &:before{
+            content: '\003E';
+          }
+          
+        }
+        
+      }
+    }
+  }
+
+}
+
+.list{
 
   > .line{
     position: relative;
@@ -11,23 +48,29 @@
       width: 110px;
       display: inline-block;
       float: left;
-      margin-top: 3px;
+      color: @app-text-color;
     }
 
     > div{
       width: auto;
       overflow: hidden;
       position: relative;
-      padding-right: 25px; //icon offset
 
       &.dropdown{
         display: block;
         width: auto;
         padding: 0 !important;
+        
+        &.open{
+          > .dropdown-toggle{
+           background-color: @app-background-color;
+          }
+        }
 
         > .dropdown-toggle{
           width: 100%;
           padding: 0 !important;
+          display: block;
           line-height: inherit;
 
           &:hover{
@@ -70,34 +113,49 @@
         top: 0;
         right: 0;
       }
+      
+      > span{
+        margin-right: @app-gutter-4;
+      }
+    }
+
+    > .divider{
+      margin: 0 !important;
     }
   }
 }
 
+
+
+
+
 .horizontal-list{
- > *{
-  display: inline-block;
-  vertical-align: middle;
   
-  &:after{
-    .d-vertical();
+  > *{
+   display: inline-block;
+   vertical-align: middle;
+  }
+  
+  > li{
     
-    content: '';
-    height: 100%;
-    width: 1px;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 100%;
-    margin: 0 @app-gutter-2 !important;
-  }
-  
-  &:last-child{
     &:after{
-      display: none;
+      .d-vertical();
+
+      content: '';
+      height: 100%;
+      width: 1px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 100%;
+      margin: 0 @app-gutter-2 !important;
     }
-  }
-  
- } 
+
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+  }  
 }
 
 .subscriptions{
@@ -108,8 +166,8 @@
     
     &:after{
       /* divider */
-      height: 145px !important;
-      margin: 0 @app-gutter-5 !important;
+      height: 165px !important;
+      margin: 0 @app-gutter-6 !important;
     }
     
     
@@ -146,6 +204,26 @@
         > i{
           margin-right: @app-gutter-2 !important;
         }
+      }
+    }
+  }
+}
+
+.uploads-info{
+  height: 100%;
+  
+  > div{
+    
+    &.uploads-left{
+      
+    }
+    
+    &.uploads-used{
+      background-color: @app-dark-panel-background;
+      color: white;
+              
+      > header{
+        color: white;
       }
     }
   }
